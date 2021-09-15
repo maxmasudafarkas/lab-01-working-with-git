@@ -11,4 +11,6 @@
   The latter should be used if getting distances for ORDER BY.
 */
 
-select ...
+SELECT ST_Distance(the_geom, 'SRID=4326;POINT(-75.19725859165192 39.95323858211971)'::geometry)
+AS distance
+FROM public.business_licenses
